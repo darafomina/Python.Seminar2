@@ -1,21 +1,12 @@
-# 4.Реализуйте алгоритм перемешивания списка.
-import random #решение из Семинара №3
+# 4. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+# Пример:
+# 45 -> 101101
+# 3 -> 11
+# 2 -> 10   
 
-list = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-
-list_shuffled =[]
-
-for i in range(0, len(list)):
-    j= random.ranrange(0, len(list))
-    list_shuffled.append(list[j])
-    list.remove(list[j])
-print(list_shuffled)
-
-exit()
-#Перемешивание списка через .shuffle
-
-import random
-
-a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-random.shuffle(a)
-print(a)
+num = int(input("Введите число "))
+binum = ''
+while num > 0:
+    binum = str(num % 2) + binum
+    num = num // 2
+print(f"Число {num} в двоичной системе это {binum}")
